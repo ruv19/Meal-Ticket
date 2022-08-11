@@ -8,7 +8,8 @@ int main()
 	ofstream dosya;
 	dosya.open("siparisler.txt");
 	
-	string yemek,s1,s2,s3,s4,s5,s6,s7,tatli,t1,t2,t3,t4,t5,t6,t7,a;
+	string yemek, s1 ,s2, s3, s4, s5, s6, s7, tatli, t1, t2, t3, t4, t5, t6, t7, a;
+
 	s1="Iskender";
 	s2="Tost";
 	s3="Sandvic";
@@ -37,103 +38,87 @@ int main()
 	cout<<"\n\n";
 	cout<<"Kac kisi oldugunuzu giriniz:"<<endl;
 	cin>>kisi;
-	for(int i=0;i<kisi;i++)
-	{
+
+	for(int i=0;i<kisi;i++) {
+
 	cout<<"Istediginiz yemekleri giriniz:"<<endl;
 	cin>>yemek;
 
-	if(yemek ==s1)
-	{
+	if(yemek == s1) {
 		yemek_ucreti=20;
 	}
-	if(yemek==s2)
-	{
+	if(yemek == s2) {
 		yemek_ucreti=10;
 	}
-	if(yemek==s3)
-	{
+	if(yemek == s3) {
 		yemek_ucreti=8;
 	}
-	if(yemek==s4)
-	{
+	if(yemek == s4) {
 		yemek_ucreti=8;
 	}
-	if(yemek==s5)
-	{
+	if(yemek == s5) {
 		yemek_ucreti=15;
 	}
-    if(yemek==s6)
-	{
+    if(yemek == s6) {
 		yemek_ucreti=24;
 	}
-	if(yemek==s7)
-	{
+	if(yemek == s7) {
 		yemek_ucreti=25;
 	}
-		toplam=toplam+yemek_ucreti;
+		toplam = toplam + yemek_ucreti;
 		
 	dosya<<yemek<<"           %8   "<<yemek_ucreti<<" "<<endl;
 	
 }
 
-    for(int j=0;j<kisi;j++)
-    {
+    for(int j=0; j<kisi ;j++) {
+
     	cout<<"Istediginiz tatlilari giriniz:"<<endl;
     	cin>>tatli;
    
-    
-    	if(tatli==t1)
-    	{
+    	if(tatli == t1) {
     		tatli_ucreti=15;
 		}
-		if(tatli==t2)
-    	{
+		if(tatli == t2) {
     		tatli_ucreti=12;
 		}
-		if(tatli==t3)
-    	{
+		if(tatli == t3) {
     		tatli_ucreti=8;
 		}
-		if(tatli==t4)
-    	{
+		if(tatli == t4) {
     		tatli_ucreti=8;
 		}
-		if(tatli==t5)
-    	{
+		if(tatli == t5) {
     		tatli_ucreti=10;
 		}
-		if(tatli==t6)
-    	{
+		if(tatli == t6) {
     		tatli_ucreti=20;
 		}
-		if(tatli==t7)
-    	{
+		if(tatli == t7) {
     		tatli_ucreti=12;
 		}
-		toplam=toplam+tatli_ucreti;
+		toplam = toplam + tatli_ucreti;
 		
     	dosya<<tatli<<"        %8   "<<tatli_ucreti<<" "<<endl;
 	}
 	
 	system("CLS");
-    topkdv=toplam*8/100;
-	garsoniye=toplam*10/100;
+    topkdv = toplam*8/100;
+	garsoniye = toplam*10/100;
 	
 	
 	ifstream  dosyaoku("siparisler.txt");
 
 	cout.width(15);cout<<internal<<"RND RESTORAN"<<endl<<"Tarih:14/10/2010"<<endl<<"Saat:12:45"<<endl;
 	cout.width(20);cout<<internal<<s<<endl;
-	while(getline(dosyaoku,a))
-	{
+
+	while(getline(dosyaoku,a)) {
 	cout<<a<<endl;
     }
+
 	cout.width(20);cout<<internal<<s<<endl;
 	cout<<"garsoniye: "<<garsoniye<<endl;
 	cout<<"toplam kdv: "<<topkdv<<endl;
 	cout<<"toplam:"<<toplam;
-	
-	
 }
 	
-
